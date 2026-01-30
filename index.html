@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Activity</title>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: rgb(113, 40, 113);
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        height: 100vh;
+        margin: 0;
+    }
+
+    form {
+        background: #679dcd;
+        padding: 30px 25px;
+        border-radius: 10px;
+        width: 320px;
+    }
+
+    label{
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .form-control{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd8d800;
+        border-radius: 6px;
+        box-sizing: border-box;
+     }
+
+     button {
+        width: 100%;
+        padding: 12px;
+        border-radius: 6px;
+        background-color: rgb(205, 185, 56);
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        cursor: pointer; 
+     }
+
+     #result {
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+        border-radius: 6px;
+        background-color: azure;
+     }
+
+</style>
+
+</head>
+<body>
+    
+<form> 
+    <label> Enter First Number </label>
+    <input type="number" class="form-control" id="num1"> 
+
+    <label> Enter Second Number </label>
+    <input type="number" class="form-control" id="num2"> 
+
+    <br>
+    <br>
+    
+    <button type="button" class="btn btn-success" onclick="sapphire()"> Click for Answer </button>
+
+    <div id="result"> Answer will show here </div>
+</form>
+
+<script>
+    function sapphire() {
+        let sap1 = document.getElementById ("num1").value;
+
+        let sap2 = document.getElementById ("num2").value;
+
+        let ops = Number(sap1) - Number(sap2);
+
+        document.getElementById ("result").innerHTML = " The difference is " + ops; 
+
+    }
+</script>
+
+</body>
+</html>
